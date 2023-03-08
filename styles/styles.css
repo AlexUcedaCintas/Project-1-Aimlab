@@ -1,16 +1,32 @@
 body {
     margin: 0;
     padding: 0;
-}
-#board{
     background-color: rgb(134, 134, 134);
     height: 100vh;
     width: 100%;
     position: relative;
+    cursor:url(../Images/pngwing.png)25 15, auto;
+}
+.menu{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
 }
 
 .objectives{
     background-color: rgb(255, 0, 0);
+    border: 1px solid black;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.objectiveHit{
+    background-color: green;
     border: 1px solid black;
     height: 5vh;
     width: 5vh;
