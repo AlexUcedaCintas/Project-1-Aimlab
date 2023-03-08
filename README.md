@@ -1,11 +1,11 @@
 TODO LIST:
 
-    -UNIFY HTMLS
-
     -home screen styles
     -game over screen styles
 
     -select crosshair
+
+    -Enemies ON/OF
 
     -survival 
         -select lives
@@ -16,5 +16,5 @@ TODO LIST:
 
     BUGS:
         -Content out of borders
-        -Score in game over screen
-        -delay last objective before game over screen
+        
+        

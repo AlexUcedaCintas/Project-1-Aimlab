@@ -2,6 +2,10 @@ class Game{
     constructor(){
         this.counter=0
         this.score=0
+        this.width = 12;
+        this.height = 12;
+        this.playerElm.style.width = this.width + "vh";
+        this.playerElm.style.height = this.height + "vh";
     }
     start(){
         this.targets = document.getElementById("targets").value 
@@ -17,20 +21,20 @@ class Game{
             }
         },2000)
     }
-    addScore(){
-        this.score ++;
-        console.log(this.score)
-    }
-
 }
 
 class Objectives {
     constructor(){
-        this.positionX = Math.round(Math.random()*200)-5
-        this.positionY = Math.round(Math.random()*100)-5
+        const bodyDiv = document.getElementById('board')
+        const boardWidth = bodyDiv.style.width
+        const boardHeight = bodyDiv.style.height
+        console.log(boardHeight)
+        this.positionX = Math.round(Math.random()*200)
+        this.positionY = Math.round(Math.random()*100)
         this.createObjective();
         this.eventListeners();
         this.removingObjective();
+        this.nohit=true;
     }
     createObjective(){
         this.objective = document.createElement('div');
@@ -43,13 +47,17 @@ class Objectives {
     removingObjective(){
         const remove = setInterval(() => {
             this.objective.remove();
+            this.nohit=true;
         }, 2000);
     }
         
     eventListeners(){
-        this.objective.addEventListener("click",e=>{
-            this.objective.setAttribute("class", "objectiveHit")
-            game.addScore();
+        this.objective.addEventListener("click",()=>{
+            if(this.nohit){
+                this.nohit=false;
+                this.objective.classList.add("objectiveHit")
+                game.score ++;
+            }
         })
     }
     
@@ -57,7 +65,7 @@ class Objectives {
 function displayScore(score,targets){
     score_block = document.createElement("div")
     score_block.className="menu"
-    score_block.innerHTML=`YOUR SCORE IS <br> ${score}/${targets}`
+    score_block.innerHTML=`YOUR SCORE IS <br> ${score}/${targets}<br><button onclick="location.reload()">PLAY AGAIN</button>`
     document.body.appendChild(score_block)
 }
 
