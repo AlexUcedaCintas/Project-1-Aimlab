@@ -2,10 +2,6 @@ class Game{
     constructor(){
         this.counter=0
         this.score=0
-        this.width = 12;
-        this.height = 12;
-        this.playerElm.style.width = this.width + "vh";
-        this.playerElm.style.height = this.height + "vh";
     }
     start(){
         this.targets = document.getElementById("targets").value 
