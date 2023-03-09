@@ -2,35 +2,36 @@ class Game{
     constructor(){
         this.counter=0
         this.score=0
+        this.targets = document.getElementById("targets").value 
+        
     }
     start(){
-        this.targets = document.getElementById("targets").value 
+        this.speed = Number(document.querySelector('input[name="lvl"]:checked').value);
+        console.log(this.speed)
         menu.remove()
         const spawnObjective = setInterval(()=>{
             if(this.counter < this.targets) {
-                const newObjective = new Objectives();
+                console.log(this.speed)
+                const newObjective = new Objectives(this.speed);
                 this.counter ++
             }
             else{
                 clearInterval(spawnObjective);
                 displayScore(this.score,this.targets);
             }
-        },2000)
+        },this.speed)
     }
 }
 
 class Objectives {
-    constructor(){
-        const bodyDiv = document.getElementById('board')
-        const boardWidth = bodyDiv.style.width
-        const boardHeight = bodyDiv.style.height
-        console.log(boardHeight)
-        this.positionX = Math.round(Math.random()*200)
-        this.positionY = Math.round(Math.random()*100)
+    constructor(speed){
+        this.positionX = Math.floor(Math.random() * 200 );
+        this.positionY = Math.floor(Math.random() * 100 );
         this.createObjective();
         this.eventListeners();
         this.removingObjective();
         this.nohit=true;
+        this.speed = speed
     }
     createObjective(){
         this.objective = document.createElement('div');
@@ -44,7 +45,7 @@ class Objectives {
         const remove = setInterval(() => {
             this.objective.remove();
             this.nohit=true;
-        }, 2000);
+        },game.speed);
     }
         
     eventListeners(){
@@ -70,3 +71,7 @@ const start_btn = document.getElementById("play");
 const menu = document.getElementsByClassName("menu")[0];
 start_btn.addEventListener('click', () => game.start());
 const game = new Game();
+tarLabel = document.getElementById("targetLabel");
+targets.addEventListener("input",function(){
+    tarLabel.innerHTML=targets.value;
+})

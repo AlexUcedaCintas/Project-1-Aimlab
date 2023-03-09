@@ -1,11 +1,17 @@
 #board {
     margin: 0;
     padding: 0;
-    background-color: rgb(134, 134, 134);
+    background-color: rgb(217, 216, 216);
     height: 100vh;
     width: 100%;
     position: relative;
-    cursor:url(./Images/pngwing.png)25 15, auto;
+    /* cursor:url(./Images/pngwing.png)25 15, auto; */
+}
+h1{
+    color: #333333; font-family: 'Bitter', serif; font-size: 50px; font-weight: normal; line-height: 54px; margin: 0 0 54px; 
+}
+h2{
+    color: #111; font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; text-align: center;
 }
 .menu{
     display:flex;
@@ -32,4 +38,100 @@
     width: 5vh;
     border-radius: 50%;
     position: absolute;
+}
+
+.button{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 260px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 900;
+    text-align: center;
+    padding: 26px 24px 48px;
+    color: #616467;
+    box-shadow: inset 0 0 0 2px #616467;
+    background-color: transparent;
+    height: 48px;
+}
+
+.button:hover{
+    color: #fff;
+    background-color: #616467;
+}
+
+.rating {
+  background-color: rgba(172, 172, 172, 0.8);
+  box-shadow: inset 0 0 0 2px #616467;
+  padding: 0.4rem 0.4rem 0.1rem 0.4rem;
+  border-radius: 2.2rem;
+}
+
+svg {
+  fill: rgb(242, 242, 242);
+  height: 3.6rem;
+  width: 3.6rem;
+  margin: 0.2rem;
+}
+
+.rating-form-2 svg {
+  height: 3rem;
+  width: 3rem;
+  margin: 0.5rem;
+}
+
+#radios label {
+  position: relative;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+input[type="radio"] + svg {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+input + svg {
+  cursor: pointer;
+}
+
+input[class="super-happy"]:hover + svg,
+input[class="super-happy"]:checked + svg,
+input[class="super-happy"]:focus + svg {
+  fill: rgb(106, 167, 227);
+}
+
+input[class="happy"]:hover + svg,
+input[class="happy"]:checked + svg,
+input[class="happy"]:focus + svg {
+  fill: rgb(0, 204, 79);
+}
+
+input[class="neutral"]:hover + svg,
+input[class="neutral"]:checked + svg,
+input[class="neutral"]:focus + svg {
+  fill: rgb(232, 214, 0);
+}
+
+input[class="sad"]:hover + svg,
+input[class="sad"]:checked + svg,
+input[class="sad"]:focus + svg {
+  fill: rgb(229, 132, 0);
+}
+
+input[class="super-sad"]:hover + svg,
+input[class="super-sad"]:checked + svg,
+input[class="super-sad"]:focus + svg {
+  fill: rgb(239, 42, 16);
 }

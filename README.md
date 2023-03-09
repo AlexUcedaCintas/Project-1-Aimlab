@@ -5,16 +5,7 @@ TODO LIST:
 
     -select crosshair
 
-    -Enemies ON/OF
-
-    -survival 
-        -select lives
-
-    -waves
-        -solapse objectives
-
-
     BUGS:
         -Content out of borders
-        
+    
         
