@@ -16,22 +16,22 @@
     user-select: none;
   }
 .cross1{
-    cursor:url(./Images/Cross1.png)25 15, auto;
+    cursor:url(./Images/Cross1.png)30 30, auto;
 }
 .cross2{
-    cursor:url(./Images/Cross2.png)25 15, auto;
+    cursor:url(./Images/Cross2.png)30 30, auto;
 }
 .cross3{
-    cursor:url(./Images/Cross3.png)25 15, auto;
+    cursor:url(./Images/Cross3.png)30 30, auto;
 }
 .cross4{
-    cursor:url(./Images/Cross4.png)25 15, auto;
+    cursor:url(./Images/Cross4.png)30 30, auto;
 }
 .cross5{
-    cursor:url(./Images/Cross5.png)25 15, auto;
+    cursor:url(./Images/Cross5.png)30 30, auto;
 }
 .cross6{
-    cursor:url(./Images/Cross6.png)25 15, auto;
+    cursor:url(./Images/Cross6.png)30 30, auto;
 }
 
 h1{
