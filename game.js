@@ -4,9 +4,27 @@ class Game {
       this.score = 0;
     }
     start() {
-      this.boardElm = document.createElement("game");
-      this.boardElm.setAttribute("id","game")
-      this.body = document.getElementById("board")
+        this.crossFinal = document.getElementById("crosshair-final")
+        this.crossNum = this.crossFinal.getAttribute("alt")
+        
+        switch(this.crossNum){
+            case "1": document.body.classList.add("cross1")
+            break;
+            case "2": document.body.classList.add("cross2")
+            break;
+            case "3": document.body.classList.add("cross3")
+            break;
+            case "4": document.body.classList.add("cross4")
+            break;
+            case "5": document.body.classList.add("cross5")
+            break;
+            case "6": document.body.classList.add("cross6")
+            break;
+          }
+
+        this.boardElm = document.createElement("game");
+        this.body = document.getElementById("board")
+        this.boardElm.setAttribute("id","game")
       this.body.appendChild(this.boardElm)
       this.targets = document.getElementById("targets").value;
       this.speed = Number(
@@ -27,7 +45,7 @@ class Game {
     displayScore(score, targets) {
       this.boardElm.remove()
       this.score_block = document.createElement("div");
-      this.score_block.className = "menu";
+      this.score_block.className = "gameOver";
       this.score_block.innerHTML = `<h1>YOUR SCORE IS</h1> <br> <h1 class="red">${score}/${targets}</h1><br><button class="button" onclick="location.reload()">PLAY AGAIN</button>`
       this.body.appendChild(this.score_block);
     }
@@ -77,9 +95,23 @@ class Game {
   
   const start_btn = document.getElementById("play");
   const menu = document.getElementsByClassName("menu")[0];
+
+  const cross = [...document.getElementsByClassName("crossImg")];
+  cross.forEach((element) => {
+    element.addEventListener("click", () => {
+      cross.forEach((element2) => {
+        element2.classList.remove("clicked");
+        element2.removeAttribute("id");
+      });
+      element.classList.add("clicked");
+      element.setAttribute("id", "crosshair-final");
+    });
+  });
+
   start_btn.addEventListener("click", () => game.start());
   const game = new Game();
   tarLabel = document.getElementById("targetLabel");
   targets.addEventListener("input", function () {
     tarLabel.innerHTML = targets.value;
   });
+  

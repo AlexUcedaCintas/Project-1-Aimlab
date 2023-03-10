@@ -1,11 +1,11 @@
 TODO LIST:
 
     -home screen styles
-    -game over screen styles
+        -range input
+        -display menu
 
     -select crosshair
 
-    BUGS:
-        -Content out of borders
+  
     
         

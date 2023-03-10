@@ -1,16 +1,19 @@
 #game {
-    background-color: rgb(217, 216, 216);
+    background-color: rgb(192, 192, 192);
     box-sizing: content-box;
     position: relative;
     height: 95vh;
     width: 95vw;
   }
   #board {
-    background-color: rgb(217, 216, 216);
+    background-color: rgb(192, 192, 192);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 .cross1{
     cursor:url(./Images/Cross1.png)25 15, auto;
@@ -32,19 +35,21 @@
 }
 
 h1{
-    color: #333333; font-family: 'Bitter', serif; font-size: 50px; font-weight: normal; line-height: 54px; margin: 0 0 54px; 
+    color: #333333; font-family: 'Bitter', serif; font-size: 100px; font-weight: normal; line-height: 54px; margin: 0 0 54px; 
 }
 h2{
-    color: #111; font-family: 'Open Sans', sans-serif; font-size: 30px; font-weight: 300; line-height: 32px; margin: 0 0 72px; text-align: center;
+    color: #333333; font-family: 'Bitter', serif; font-size: 50px; font-weight: normal; line-height: 54px; margin: 0 0 54px; 
 }
 .menu{
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
     text-align: center;
     height: 100vh;
+ 
 }
+
+
 
 .objectives{
     background-color: rgb(255, 0, 0);
@@ -162,3 +167,54 @@ input[class="super-sad"]:checked + svg,
 input[class="super-sad"]:focus + svg {
   fill: rgb(239, 42, 16);
 }
+
+#title, #start{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#targets{
+    width: 100%;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 20%;
+    padding:0 30px;
+    width: 100%;
+}
+
+.crosshairs{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.crosshairs img{
+    width: 40%;
+    transform: scale(0.5);
+}
+
+.clicked{
+    outline: 5px solid rgb(118, 118, 118);
+    border-radius: 20%;
+}
+
+.gameOver{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+}
+
