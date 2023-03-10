@@ -52,7 +52,7 @@ h2{
 
 
 .objectives{
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 28, 28);
     border: 1px solid black;
     height: 5vh;
     width: 5vh;
@@ -61,7 +61,7 @@ h2{
 }
 
 .objectiveHit{
-    background-color: green;
+    background-color: rgb(0, 185, 0);
     border: 1px solid black;
     height: 5vh;
     width: 5vh;
