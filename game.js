@@ -4,24 +4,25 @@ class Game {
       this.score = 0;
     }
     start() {
+        
         this.crossFinal = document.getElementById("crosshair-final")
         this.crossNum = this.crossFinal.getAttribute("alt")
-        
+    
         switch(this.crossNum){
-            case "1": document.body.classList.add("cross1")
-            break;
-            case "2": document.body.classList.add("cross2")
-            break;
-            case "3": document.body.classList.add("cross3")
-            break;
-            case "4": document.body.classList.add("cross4")
-            break;
-            case "5": document.body.classList.add("cross5")
-            break;
-            case "6": document.body.classList.add("cross6")
-            break;
-          }
-
+                case "1": document.body.classList.add("cross1")
+                break;
+                case "2": document.body.classList.add("cross2")
+                break;
+                case "3": document.body.classList.add("cross3")
+                break;
+                case "4": document.body.classList.add("cross4")
+                break;
+                case "5": document.body.classList.add("cross5")
+                break;
+                case "6": document.body.classList.add("cross6")
+                break;
+              }
+        
         this.boardElm = document.createElement("game");
         this.body = document.getElementById("board")
         this.boardElm.setAttribute("id","game")

@@ -1,10 +1,4 @@
-TODO LIST:
-
-    -home screen styles
-        -range input
-        -display menu
-
-    -select crosshair
+[AIMLAB](https://alexucedacintas.github.io/Project-1-Aimlab/)
 
   
     

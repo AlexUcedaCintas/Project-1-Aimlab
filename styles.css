@@ -205,8 +205,9 @@ input[class="super-sad"]:focus + svg {
 }
 
 .clicked{
-    outline: 5px solid rgb(118, 118, 118);
+    outline: 5px solid rgb(255, 52, 52);
     border-radius: 20%;
+    background-color: #7740404e;
 }
 
 .gameOver{
